@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Enter Temperature</label><br>
+    <input type="text" id="temperatur" placeholder="Enter Temperature">
+
+    <h1 id="answer"></h1>
+    
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("temperatur").value 
+
+    
+    if(a>80){
+        document.getElementById("answer").innerText = "It's hot!"   
+    }
+
+</script>

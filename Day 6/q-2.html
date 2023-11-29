@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Enter The age</label><br>
+    <input type="text" id="age" placeholder="Enter The age">
+
+    <h1 id="answer"></h1>
+    
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("age").value
+
+    if (a == ""){
+        document.getElementById("answer").innerHTML=""
+    }
+    else if(a>0 && a < 18){
+        document.getElementById("answer").innerHTML="minor"
+    }
+    else if (a >= 18 && a < 65){
+        document.getElementById("answer").innerHTML="adult"
+    }
+    else if(a >= 65){
+        document.getElementById("answer").innerHTML="senior citizen"
+    }
+    else{
+        document.getElementById("answer").innerHTML="invalid age"
+    }
+
+</script>
