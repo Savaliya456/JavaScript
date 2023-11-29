@@ -7,32 +7,23 @@
 </head>
 <body>
 
-    <label for="">Enter The age</label><br>
-    <input type="text" id="age" placeholder="Enter The age">
+    <label for="">Enter The age</label>
+    <input type="text" id="a1" placeholder="Enter The age">
 
-    <h1 id="answer"></h1>
+    <h1 id="ans"></h1>
     
 </body>
 </html>
 
 <script>
 
-    let a = document.getElementById("age").value
+    let a = document.getElementById("a1").value
 
-    if (a == ""){
-        document.getElementById("answer").innerHTML=""
-    }
-    else if(a>0 && a < 18){
-        document.getElementById("answer").innerHTML="minor"
+    if(a < 18){
+        document.getElementById("ans").innerHTML="Minor"
     }
     else if (a >= 18 && a < 65){
-        document.getElementById("answer").innerHTML="adult"
-    }
-    else if(a >= 65){
-        document.getElementById("answer").innerHTML="senior citizen"
-    }
-    else{
-        document.getElementById("answer").innerHTML="invalid age"
+        document.getElementById("ans").innerHTML="Sinior"
     }
 
 </script>

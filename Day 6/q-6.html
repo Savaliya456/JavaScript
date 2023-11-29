@@ -7,27 +7,27 @@
 </head>
 <body>
 
-    <label for="">Enter Number</label> <br>
-    <input type="text" id="num" placeholder="Enter Number"> 
+    <label for="">Enter Number</label>
+    <input type="text" id="a1" placeholder="Enter Number">
 
-    <h1 id="answer"></h1>
+    <h1 id="ans"></h1>
     
 </body>
 </html>
 
 <script>
 
-    let number=document.getElementById("num").value
+    let number=document.getElementById("ans").value
 
     if(number == ""){
-        document.getElementById("answer").innerText=""
+        document.getElementById("ans").innerText="enter number"
     }
     else{
         if(number % 2 != 0){
-            document.getElementById("answer").innerText="odd"
+            document.getElementById("ans").innerText="odd"
         }
         else{
-            document.getElementById("answer").innerText="even"
+            document.getElementById("ans").innerText="even"
         }
     }
 

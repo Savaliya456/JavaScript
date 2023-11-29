@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+
+        <label for="">First value</label> <br>
+        <input type="text" id="f1" placeholder="enter value"> <br> <br>
+
+        <label for="">Second value</label> <br>
+        <input type="text" id="f2" placeholder="enter value"> <br> <br>
+
+        <label for="">Third value</label> <br>
+        <input type="text" id="f3" placeholder="enter value"> <br> <br>
+
+        <label for="">Fourth value</label> <br>
+        <input type="text" id="f4" placeholder="enter value"> <br> <br>
+
+        <label for="">Fifth value</label> <br>
+        <input type="text" id="f5" placeholder="enter value"> <br> <br>
+
+        <h1>Before</h1>
+        <h2 id="a1"></h2>
+        <h2 id="a2"></h2>
+        <h2 id="a3"></h2>
+        <h2 id="a4"></h2>
+        <h2 id="a5"></h2>
+
+        <h1>After</h1>
+        <h2 id="b1"></h2>
+        <h2 id="b2"></h2>
+        <h2 id="b3"></h2>
+        <h2 id="b4"></h2>
+        <h2 id="b5"></h2>
+
+    </center>
+    
+</body>
+</html>
+<script>
+
+    let a=document.getElementById("f1").value
+    let b=document.getElementById("f2").value
+    let c=document.getElementById("f3").value
+    let d=document.getElementById("f4").value
+    let e=document.getElementById("f5").value
+
+    //Before
+
+    document.getElementById("a1").innerHTML= a
+    document.getElementById("a2").innerHTML= b
+    document.getElementById("a3").innerHTML= c
+    document.getElementById("a4").innerHTML= d
+    document.getElementById("a5").innerHTML= e
+
+    //after
+
+    document.getElementById("b1").innerHTML= b
+    document.getElementById("b2").innerHTML= c
+    document.getElementById("b3").innerHTML= d
+    document.getElementById("b4").innerHTML= e
+    document.getElementById("b5").innerHTML= a
+
+</script>
