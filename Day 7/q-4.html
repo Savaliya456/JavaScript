@@ -6,28 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Check Offer for Electronic and Cloth</h1>
-    <h2>What you want ?</h2>
-    <input type="text" id="item" placeholder="enter item name">
+    <h1>What is Yolur Shipping Place</h1>
+    <h2>local?<br>national?<br>international?</h2>
+    <input type="text" id="place" placeholder="Your Place">
     <h1 id="ans"></h1>
 </body>
 </html>
 <script>
-    let a = document.getElementById("item").value
-
+    let a = document.getElementById("place").value
     if(a==""){
         document.getElementById("ans").innerHTML = ""
 
     }
     else{
-        if(a=="Electronic"){
-           document.getElementById("ans").innerHTML = "10% off for 2 or more items"
+        if(a=="local"){
+        document.getElementById("ans").innerHTML = "$5 + $1 per pound"
         }
-        else if(a=="cloth"){
-           document.getElementById("ans").innerHTML = "Buy 1 get 1 50% off"
+        else if(a=="national"){
+            document.getElementById("ans").innerHTML = "$10 + $2 per pound"
+        }
+        else if(a == "international"){
+            document.getElementById("ans").innerHTML = "$20 + $5 per pound"
         }
         else{
-           document.getElementById("ans").innerHTML = "Ongoing promotions: Additional discounts based on specific products or time-limited offers"
+            document.getElementById("ans").innerHTML = "Invalid"
         }
     }
+
 </script>
