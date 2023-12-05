@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <label for="">Enter Dollar</label> <br><br>
+
+        <input type="text" name="" id="a1" placeholder="Enter Dollar"> 
+
+        <h1 id="answer"></h1>
+    
+</body>
+</html>
+
+<script>
+
+    let dollar=document.getElementById("a1").value 
+
+    let result
+
+    if(dollar=="")
+    {
+        result=" "
+    }
+    else{
+
+    result=dollar*102
+
+    document.getElementById("answer").innerHTML=result
+    }
+</script>

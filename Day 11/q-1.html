@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter any character</h1>
+    <input type="text" id="character" placeholder="Enter any character">
+    <br>
+    <h1 id="answer"></h1>
+</body>
+</html>
+<script>
+
+    let a = document.getElementById("character").value
+    let answer
+    switch(a){
+        case '' : answer = ''
+        break;
+        case 'a' : answer = 'This is a Vowel'
+        break;
+        case 'e' : answer = 'This is a Vowel'
+        break;
+        case 'i' : answer = 'This is a Vowel'
+        break;
+        case 'o' : answer = 'This is a Vowel'
+        break;
+        case 'u' : answer = 'This is a Vowel'
+        break;
+        case 'A' : answer = 'This is a Vowel'
+        break;
+        case 'E' : answer = 'This is a Vowel'
+        break;
+        case 'I' : answer = 'This is a Vowel'
+        break;
+        case 'O' : answer = 'This is a Vowel'
+        break;
+        case 'U' : answer = 'This is a Vowel'
+        break;
+        default : answer = 'This is Constant'
+        break;
+    }
+    document.getElementById("answer").innerHTML = answer
+
+</script>
