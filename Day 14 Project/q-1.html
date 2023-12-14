@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter guest Number</h1>
+    <input type="text" id="number" placeholder="Enter number"><br><br>
+
+    <h1 id="answer">
+    </h1>
+
+</body>
+</html>
+<script>
+
+    let a = document.getElementById("number").value
+
+    if(a==""){
+        
+    }
+    else{
+        if(a==0){
+            console.log("It seems like no one is attending the reception. Are you sure?")
+        }
+        else if(a==1){
+            document.getElementById("answer").innerHTML = "Great! There is one guest attending the reception."
+        }
+        else if(a==2){
+            document.getElementById("answer").innerHTML = "Perfect! You and one other person will be attending the reception."
+
+        }
+        else if(a>2){
+            document.getElementById("answer").innerHTML = "guests will be attending the reception."
+        }
+        else{
+            document.getElementById("answer").innerHTML = "Invalid input. Please enter a valid number of guests."
+
+        }
+    }
+
+    let lim = parseInt(a)
+
+    for(let i=1;i<=lim;i++){
+        if(i==3){
+            continue;
+        }
+        document.write(`Thank you, guest(${i}) for attending the reception!`,"<br>")
+
+
+
+    }
+
+</script>
