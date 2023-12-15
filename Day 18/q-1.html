@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Enter The Number" id="a1"> <br> <br>
+    <input type="text" placeholder="Enter The Number" id="a2"> <br> <br>
+    
+</body>
+</html>
+
+<script>
+
+    let ans1=document.getElementById("a1").value
+    let ans2=document.getElementById("a2").value
+
+    function sum(a){
+        return function(b){
+            return +a + +b
+        }
+    }
+
+    let output = sum(ans1)
+    document.write(output(ans2))
+
+</script>
