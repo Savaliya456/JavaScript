@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let quotes = [
+        {text : "Be yourself; everyone else is already taken.",author : "Oscar Wilde",category : "education"}, 
+        {text : "So many books, so little time.",author : "Frank Zappa",category : "Life"},
+        {text : "A room without books is like a body without a soul.",author : "Marcus Tullius Cicero",category : "education"}, 
+        {text : "Be the change that you wish to see in the world.",author : "Mahatma Gandhi",category : "Life"}
+    ] 
+
+    let array = []
+
+    for(let i = 0;i<quotes.length;i++){
+        if(quotes[i].category === "education"){
+            array.push(quotes[i].text)
+        }
+    }
+    console.log(array)
+        
+</script>
