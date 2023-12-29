@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    const library = [
+            {
+                title : "The Post Office",
+                author : "Rabindra Nath Tagore",
+                year : 1995
+            },
+            {
+                title : "Malgudi day",
+                author : "R K Narayan",
+                year : 1967
+            },
+            {
+                title : "The private life of an indian prince",
+                author : "Mulk Raj Anand",
+                year : 2005
+            },
+    ];
+
+    function find(library, year) {
+        let filter = library.filter(book => book.year < year);
+
+        let titles = filter.map(book => book.title);
+        
+        return titles;
+    }
+
+    let books = find(library, 2000);
+    console.log(books);
+
+
+</script>

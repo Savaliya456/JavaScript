@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h1>Third H1</h1> 
+    <button onclick="chgbtn1()">Change to Red</button> <br> <br>
+
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h3>Third H3</h3>
+    <button onclick="chgbtn2()">Change to Green</button> <br> <br>
+
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <button onclick="chgbtn3()">Change to Blue</button> <br> <br> <hr> <hr>
+
+
+
+    <h2 class="green">First H1</h2>
+    <h2 class="blue">Second H1</h2>
+    <h2 class="red">Third H1</h2> 
+     <br> <br>
+
+    <h4 class="green">First H3</h4>
+    <h4 class="blue">Second H3</h4>
+    <h4 class="red">Third H3</h4>
+     <br> <br>
+
+    <h6 class="green">First H5</h6>
+    <h6 class="blue">Second H5</h6>
+    <h6 class="red">Third H5</h6>
+     <br> <br>
+
+
+    <button onclick="chgbtn4()">Change to Green</button>
+    <button onclick="chgbtn5()">Change to Blue</button>
+    <button onclick="chgbtn6()">Change to Red</button>
+    
+</body>
+</html>
+
+<script>
+
+    function chgbtn1(){
+        var fst = document.querySelector('h1')
+        fst.style.color = "red"
+        fst.style.backgroundColor = "yellow"
+    }
+
+    var head1=document.querySelectorAll('h3')
+    function chgbtn2(){
+        var fst1 = document.querySelector('h3')
+            for(i = 0; i < head1.length; i++){
+                head1[i].style.color ="green"
+                head1[i].style.backgroundColor ="black"
+            }
+    }
+
+    var head2=document.querySelectorAll('h5')
+    function chgbtn3(){
+        var fst2 = document.querySelector('h5')
+            for(i = 0; i < head2.length; i++){
+                head2[i].style.color ="blue"
+                head2[i].style.backgroundColor ="grey"
+            }
+    }
+
+    
+    function chgbtn4(){
+        var head4 = document.querySelectorAll('.green')
+            for(i = 0; i < head4.length; i++){
+                head4[i].style.color ="green"
+            }
+    }
+
+    function chgbtn5(){
+        var head5 = document.querySelectorAll('.blue')
+            for(i = 0; i < head5.length; i++){
+                head5[i].style.color ="blue"
+            }
+    }
+
+    function chgbtn6(){
+        var head6 = document.querySelectorAll('.red')
+            for(i = 0; i < head6.length; i++){
+                head6[i].style.color ="red"
+            }
+    }
+
+    
+</script>
