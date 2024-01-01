@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+</body>
+</html>
+
+<script>
+
+    let a = 15
+    let b = 2
+
+    function divide(n,h){
+        if(h<=0){
+            throw new Error("Number not divisible by 0")
+        }
+        else{
+            console.log("divisible by 2 number : ",n/h)
+        }
+    }
+
+    try{
+        divide(a,b)
+    }
+    catch(a){
+        console.log("Error : ",a.message)
+    }
+
+</script>
