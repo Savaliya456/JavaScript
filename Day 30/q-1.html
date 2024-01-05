@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+    <form action="" id="signup">
+        <h1>Sign Up Form</h1>
+
+        <input type="text" placeholder="Enter Your Name" id="ab">
+        <br><br><br>
+        <input type="text" placeholder="Enter Your email" id="cd">
+        <br></br><br>
+        <input type="text" placeholder="Enter Your Number" id="bc">
+        <br><br><br>
+        <input type="password" placeholder="Password" id="de">
+        <br><br><br>
+        <input type="password" placeholder="Confirm Password" id="sa">
+        <br><br><br>
+        
+        <button >Signup</button> <br><br><br>
+
+        <span id="err" style="color: red;"></span>
+    </form>
+        
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    document.getElementById("signup").onsubmit=function(event){
+
+    try{
+        var name = document.getElementById("ab").value
+        var email = document.getElementById("cd").value
+        var mob = document.getElementById("bc").value
+        var password = document.getElementById("de").value
+        var confirm = document.getElementById("sa").value;
+
+        if(/\d/.test(name)) {
+            throw new Error("Invalid Name");
+        } 
+
+        if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+            throw new Error("Invalid email");
+        }
+
+        if(!/^\d{10}$/.test(mob)) {
+            throw new Error("Invalid Mobile Number");
+        }
+
+        if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password)){
+            throw new Error("Invalid password");
+        }
+
+        else{
+            throw new Error("Complete")
+        }
+    }
+        catch(error){
+            event.preventDefault()
+            document.getElementById("err").innerText = error.message
+        }
+    }
+
+</script>
