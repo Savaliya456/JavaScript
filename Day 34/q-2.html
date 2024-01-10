@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class animal{
+        makeSound(){
+            document.write("Enter value")
+        }
+    }
+    class Bakri extends animal{
+        makeSound(){
+            document.write("Bakri :- Bee-Bee-Bee<br>")
+        }
+    }
+    class Buffallo extends animal{
+        makeSound(){
+            document.write("Buffalo :- Bheee-Bheee<br>")
+        }
+    }
+    class Dog extends animal{
+        makeSound(){
+            document.write("Dog :- bhau-bhau<br>") 
+        }
+    }
+
+    const findBakriArea = new Bakri
+    const findBuffalloArea = new Buffallo
+    const findDogArea = new Dog
+    findDogArea.makeSound()
+    findBuffalloArea.makeSound()
+    findBakriArea.makeSound()
+
+</script>

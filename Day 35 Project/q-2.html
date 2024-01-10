@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class Instrument{
+        playSound(){
+            document.write("Enter value")
+        }
+    }
+    class Guitar extends Instrument{
+        playSound(){
+            document.write("Guitar = Strumming the guitar strings<br>")
+        }
+    }
+    class Piano extends Instrument{
+        playSound(){
+            document.write("Piano = Pressing the piano keys <br>")
+        }
+    }
+
+    const findGuitarArea = new Guitar
+    const findPianoArea = new Piano
+    findGuitarArea.playSound()
+    findPianoArea.playSound()
+
+</script>
