@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <img src="img/h1_hero1 (3).jpg" alt="">
+        <img src="img/h1_hero2.jpg" alt="">
+
+            <br><br><br>
+            <button onclick="stopslide()">Stop</button>&nbsp;
+            <button onclick="startslide()">Start</button>
+
+    </div>
+
+</body>
+</html>
+<script>
+
+    let sliderImage = document.querySelectorAll("img")
+    let slidernumber = 0
+    let stop
+
+    function sliderchange(index){
+        for(let i = 0;i < sliderImage.length;i++){
+            sliderImage[i].style.display = "none"
+        }
+        sliderImage[index].style.display = "block"
+    }
+
+    function interval(){
+    stop = setInterval(()=>{
+            sliderchange(slidernumber)
+            slidernumber++
+
+            if(slidernumber >= sliderImage.length){
+                slidernumber = 0
+            }
+        },2000)
+    }
+
+    function stopslide(){
+        clearInterval(stop)
+    }
+    function startslide(){
+        interval()
+    }
+
+    interval()
+    sliderchange(slidernumber)
+</script>

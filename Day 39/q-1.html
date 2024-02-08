@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let signup = document.getElementById("signup")
+
+    signup.addEventListener("submit",function(event){
+    event.preventDefault()
+
+    let email = document.getElementById("email").value
+    let phone = document.getElementById("phone").value
+    let password = document.getElementById("password").value
+
+    let StoradUsrers = JSON.parse(localStorage.getItem "users")) || []
+    storedUsrers.push({email, phone, password})
+
+    localStorage.setItem("users",JSON.stringify(storedUsrers))
+
+
+
+    login.addEventListener("submit",function(event){
+    event.preventDefault()
+
+    let loginemail = document.getElementById("loginemail").value
+    let loginpassword = document.getElementById("loginpassword").value
+    let storedUsrers = JSON.parse(localStorage.getItem("users")) || []
+    let users = storedUsrers.find((el)=>loginemail === el.email && loginpassword === el.password)  
+
+    if(users){
+        alert("Logged In")
+    } else{
+        alert("Incorrect email or password")
+    }
+    })
+
+</script>
