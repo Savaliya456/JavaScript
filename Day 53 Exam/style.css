@@ -1,0 +1,214 @@
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    /* background-color: black; */
+}
+header{
+    height: 120px;
+    width: 100%;
+    /* border: 1px solid white; */
+}
+
+.main{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid ; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    position: fixed;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.logo{
+    flex-basis: 20%;
+    height: 50px;
+    /* border: 1px solid ; */
+}
+
+.logo img{
+    width: 45%;
+    height: 100%;
+    /* margin-top: 20px; */
+}
+
+nav{
+    flex-basis: 50%;
+    height: 80px;
+    /* border: 1px solid; */
+}
+
+nav ul{
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #314758;
+    font-size: 16px;
+}
+
+.icons{
+    width: 25%;
+    height: 80px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input[type=search]{
+    width: 230px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FAFAFA;
+}
+
+.icons i{
+    color: #2A4153;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.slide{
+    width: 400px;
+    /* height: 100vh; */
+    /* padding-left: 120px; */
+    padding-top: 0px;
+    /* position: fixed; */
+    margin-left: 100px;
+    top: 0px;
+    /* background-color: black; */
+    /* border: 1px solid; */
+}
+
+.slide h3{
+    color: #2A4153;
+    margin-top: 20px;
+}
+
+#sort-select{
+    width: 80%;
+    height: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #314758;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+#main1{
+    width: 100%;
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 20px;
+    right: 0;
+    position: sticky;
+    top: 100px;
+    /* border: 1px solid; */
+    overflow: hidden;
+    
+}
+
+#photo{
+    width: 96%;
+    height: 361px;
+    margin-top: 10px;
+    margin-left: 2%;
+    overflow: hidden;
+    transition: .3s;
+}
+
+#h4{
+    font-size: 14px;
+    margin-top: 15px;
+    color: whitehet;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+#price{
+    margin-left: 2%;
+    color: black;
+    cursor: pointer;
+}
+
+#price {
+    font-size:18px;
+    margin-bottom: 8px;
+}
+
+p{
+    font-size: 16px;
+    margin-left: 2%;
+    color: black    ;
+}
+
+#maindiv1{
+    width: 67%;
+    border: 1px solid black;
+    border-radius: 6px;
+    z-index: -2;
+    cursor: pointer;
+    overflow: hidden;
+    margin-inline: 20px;
+    box-shadow: 2px 5px 33px white;
+}
+
+#maindiv1 button{
+    /* display: none; */
+    width: 95%;
+    height: 40px;
+    border: none;
+    background-color: #2a532e;
+    border-radius: 10px;
+    color: #fff;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#size{
+    /* display: none; */
+    position: relative;
+}
+
+/* #maindiv1:hover #size{
+    margin-top: 6px;
+    display: block;
+} */
+/* #maindiv1:hover button{
+    display: block;
+} */
+
+/* #maindiv1:hover p{
+    display: none;
+} */
+
+/* #maindiv1:hover #prix1{
+    display: none;
+} */
+
+#maindiv1:hover #h4{
+    visibility: hidden;
+}
+#add{
+    width: 120px;
+}

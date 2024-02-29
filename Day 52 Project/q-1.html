@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+</head>
+<body>
+    <h1>Task Management System</h1>
+    
+    <label for="taskInput">Task:</label>
+    <input type="text" id="taskInput">
+    <label for="priorityInput">Priority:</label>
+    <select id="priorityInput">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+    
+    <h2>Task List</h2>
+    <ul id="taskList"></ul>
+
+    <label for="filterPriority">Filter by Priority:</label>
+    <select id="filterPriority" onchange="filterTasks()">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+
+    <script src="taskManager.js"></script>
+</body>
+</html>
+<script>
+
+    // Task data structure
+function Task(description, priority) {
+    this.description = description;
+    this.priority = priority;
+}
+
+// Task Manager
+const taskManager = {
+    tasks: [],
+    
+    addTask: function (description, priority) {
+        const newTask = new Task(description, priority);
+        this.tasks.push(newTask);
+        this.displayTasks();
+    },
+
+    deleteTask: function (index) {
+        this.tasks.splice(index, 1);
+        this.displayTasks();
+    },
+
+    displayTasks: function () {
+        const taskList = document.getElementById('taskList');
+        taskList.innerHTML = '';
+
+        this.tasks.forEach((task, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `${task.description} - Priority: ${task.priority} <button onclick="taskManager.deleteTask(${index})">Delete</button>`;
+            taskList.appendChild(li);
+        });
+    },
+
+    filterTasks: function (priority) {
+        const filteredTasks = (priority === 'all') ? this.tasks : this.tasks.filter(task => task.priority === priority);
+        const taskList = document.getElementById('taskList');
+        taskList.innerHTML = '';
+
+        filteredTasks.forEach(task => {
+            const li = document.createElement('li');
+            li.innerHTML = `${task.description} - Priority: ${task.priority}`;
+            taskList.appendChild(li);
+        });
+    }
+};
+
+// Function to add a new task
+function addTask() {
+    const taskInput = document.getElementById('taskInput').value;
+    const priorityInput = document.getElementById('priorityInput').value;
+
+    if (taskInput.trim() !== '') {
+        taskManager.addTask(taskInput, priorityInput);
+    }
+}
+
+// Function to filter tasks by priority
+function filterTasks() {
+    const filterPriority = document.getElementById('filterPriority').value;
+    taskManager.filterTasks(filterPriority);
+}
+
+
+</script>

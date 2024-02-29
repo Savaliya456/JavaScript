@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <!-- Link Css -->
+    <link rel="stylesheet" href="cart.css">
+    <!-- Link Css -->
+    
+</head>
+<body>
+
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="PNG_LOGO_280x.avif" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="finalpage.html">HOME</a></li>
+                    <li><a href="finalpage.html">CART</a></li>
+                    <li><a href="finalpage.html">SHOPPING</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h3 id="Shopping">Shopping bag</h3>
+    <div id="cart">
+       
+    </div> 
+</body>
+</html>
+<script>
+    let products = JSON.parse(localStorage.getItem("cart")) || []
+
+function display(){
+    products.map((el,index)=>{
+        let div = document.createElement("div")
+        div.setAttribute("id" , "cartproducts")
+        
+        let image = document.createElement("img")
+        image.setAttribute("src", el.image)
+        image.setAttribute("id" , "photos")
+
+        let title = document.createElement("h2")
+        title.innerHTML = el.title
+
+        let price = document.createElement("h3")
+        price.setAttribute("id" , "price")
+        price.innerHTML = el.price
+
+        let size = document.createElement("p")
+            size.innerText = "Size : " + el.size
+            size.setAttribute("id" , "size")
+
+            let dri = document.createElement("p")
+            dri.setAttribute("id" , "description")
+            dri.innerText = el.description
+
+        let delBtn = document.createElement("button")
+        delBtn.setAttribute("id" , "btn")
+        delBtn.innerHTML = "Remove Item"
+        delBtn.addEventListener("click",function(){
+        products.splice(products.indexOf(el),1)
+        
+        localStorage.setItem("cart",JSON.stringify(products))
+        location.reload()
+    
+        })
+
+        div.append(image,title,dri,price,size,delBtn)
+        document.getElementById("cart").append(div)
+    })
+    
+}
+display(products)
+</script>

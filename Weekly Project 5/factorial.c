@@ -1,27 +1,21 @@
-#include <stdio.h>
+#include<stdio.h>
 
-long factorial(int n) {
-    if (n == 0 || n == 1) {
-        return 1;
-    } else {
-        return n * factorial(n - 1);
-    }
+int factorial_number(int n){
+	if(n<=1){
+		return 1;
+	}
+	else{
+		return n * factorial_number(n-1);
+	}
 }
 
-int main() {
-    int num;
-    long fact = 1;
-
-    printf("Enter a positive integer: ");
-    scanf("%d", &num);
-
-    if (num < 0) {
-        printf("Error: Factorial of a negative number is undefined.\n");
-    } 
-	else {
-        fact = factorial(num);
-        printf("Factorial of %d = %llu\n", num, fact);
-    }
-
-    return 0;
+main(){
+	
+	int i,n;
+	
+	printf("Enter Number for factorial :- ");
+	scanf("%d",&n);
+	
+	printf("Factorial number is :- %d",factorial_number(n));
+	
 }

@@ -1,34 +1,27 @@
-#include <stdio.h>
-#include <stdbool.h>
+#include<stdio.h>
 
-bool isPrime(int num) {
-    if (num <= 1)
-        return false; // 0 and 1 are not prime
-
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0)
-            return false; // If num is divisible by any number in this range, it's not prime
-    }
-
-    return true; // If no divisors found, num is prime
+main(){
+	
+	int n,i,ans;
+	printf("Enter number :- ");
+	scanf("%d",&n);
+	
+	if(n==0 || n==1){
+		ans = 1;
+	}
+	
+	for(i=2;i<=n/2;i++){
+		if(n%i==0){
+			ans = 1;
+			break;
+		}		
+	}
+	
+	if(ans == 1){
+		printf("%d is not prime number",n);
+	}
+	else{
+		printf("%d ia a prime number",n);
+	}
+	
 }
-
-int main() {
-    int num;
-
-    printf("Enter a positive integer: ");
-    scanf("%d", &num);
-
-    if (num <= 0) {
-        printf("Error: Input should be a positive integer.\n");
-    } else {
-        if (isPrime(num)) {
-            printf("%d is a prime number.\n", num);
-        } else {
-            printf("%d is not a prime number.\n", num);
-        }
-    }
-
-    return 0;
-}
-
