@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function targetSum(arr,ter){
+        let stert = 0
+        let end = arr.length-1
+        console.log(stert,end)
+
+        while(stert < end){
+            let sum = arr[stert]+arr[end]
+            if(sum === ter){
+                return [stert,end]
+                break
+            }
+            if(arr[end] > ter){
+                end--
+            }
+            else{
+                stert++
+            }
+        }
+    }
+
+    let num = [2,7,11,15]
+    let target = 9
+    console.log(targetSum(num,target))
+
+</script>

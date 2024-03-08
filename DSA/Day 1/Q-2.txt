@@ -1,0 +1,14 @@
+function (n){
+
+    for(let i=1;i<=n;i++){
+        for(let j=n;j>=i;j--){
+            return 1;
+        }
+        return "<br>"
+    }
+
+}
+
+2 + n*3 + m*3
+
+2+3(m+n)

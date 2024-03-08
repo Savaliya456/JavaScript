@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let firstlist1 = new link(1)
+    let firstlist2 = new link(3)
+    let firstlist3 = new link(5)
+
+    let secondlist1 = new link(2)
+    let secondlist2 = new link(4)
+    let secondlist3 = new link(6)
+
+    function link(value){
+        this.node = value
+        this.next = null
+    }
+
+    firstlist1.next = secondlist1
+    secondlist1.next = firstlist2
+    firstlist2.next = secondlist2
+    secondlist2.next = firstlist3
+    firstlist3.next = secondlist3
+
+    let result = firstlist1
+    while(result != null){
+        console.log(result.node)
+        result = result.next
+    }
+
+</script>

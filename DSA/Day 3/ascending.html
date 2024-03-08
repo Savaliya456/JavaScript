@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ascending</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let arr=[15,12,14,11,13]
+
+    function selection(arr){
+        for(let i = 0; i < arr.length; i++) {
+            let last = arr.length-i-1
+            let maxValue = getMax(arr, 0, last)
+            swap(arr, maxValue, last)
+        }
+    }
+
+    function getMax(arr , s , e){
+        let max = 0
+        for(let i=s; i<=e; i++) {
+            if(arr[i] > arr[max]){
+                max = i
+            }
+        }
+        return max
+    }
+
+    function swap(arr, f, s){
+        let t = arr[f]
+        arr[f] = arr[s]
+        arr[s] = t
+    }
+    
+    selection(arr)
+    console.log(arr)
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function targetSum(arr,tar){
+        let start = 0
+        let end = arr.length-1
+        console.log(start,end)
+
+        while(start < end){
+            let sum = arr[start]+arr[end]
+            if(sum === tar){
+                return [start,end]
+                break
+            }
+            if(arr[end] > tar){
+                end--
+            }
+            else{
+                start++
+            }
+        }
+    }
+
+    let num = [3,3]
+    let target = 6
+    console.log(targetSum(num,target))
+
+</script>

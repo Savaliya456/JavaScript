@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function list(val){
+        this.node = val
+        this.next = null
+    }
+    let list1 = new list(1)
+    let list2 = new list(2)
+    let list3 = new list(3)
+    let list4 = new list(4)
+    let list5 = new list(5)
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+    let listall = list1
+    let n = 2
+    let nodelength = 5
+
+    removeElement(listall,n,nodelength)
+    
+    function removeElement(lists,remove,totalnode){
+        let n = remove
+        let cout = totalnode
+        let step = lists
+        while(step != null){
+            if(cout === n){
+                step = step.next
+            }
+            else{
+                console.log(step.node)
+                step = step.next
+            }
+            cout--
+        }
+    }
+
+</script>

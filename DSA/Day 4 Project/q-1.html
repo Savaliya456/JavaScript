@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    const prices1 = [7, 1, 5, 3, 6, 4];
+        const result1 = First(prices1);
+        console.log("Ans = ", result1);
+    
+        const prices2 = [7, 6, 4, 3, 1];
+        const result2 = First(prices2);
+        console.log("Ans = ", result2);
+
+    function First(prices) {
+        if (!prices || prices.length < 2) {
+            return 0;
+        }
+
+        let last = prices[0];
+        let First = 0;
+
+        for (let i = 1; i < prices.length; i++) {
+            if (prices[i] < last) {
+                last = prices[i];
+            } else {
+                First = Math.max(First, prices[i] - last);
+            }
+        }
+        return First;
+    }
+
+</script>
